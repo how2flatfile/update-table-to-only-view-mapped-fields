@@ -1,6 +1,7 @@
 # Getting Started
 
 ## First things FIRST
+
 If you find any issues with this README, or the repo in general, please email me at `how2flatfile@gmail.com`, or make a PR. I do what I can to keep everything in order, but I am human, after all 🙂
 
 ## For visual learners
@@ -18,7 +19,7 @@ I recommend you read through it
 
 
 ### Basics
-- [Click this link](https://github.com/how2flatfile/submit-mapped-fields) to access the repository
+- [Click this link](https://github.com/how2flatfile/update-table-to-only-view-mapped-fields.git) to access the repository
 
 - Make sure that you are looking at the branch called `main`  
 
@@ -37,36 +38,40 @@ _________________________________________________
 - Run `npm outdated`. If any Flatfile-related packages are not on the latest, update them to be on the latest
   - If you do update to the latest, after you do so, run `npm outdated` again to ensure update completed
 
-- On line 7, replace existing link inside `webhookReceiver` with your unique URL
+- On line 8, replace existing link inside `webhookReceiver` with your unique URL
   - Go to https://webhook.site/ , and copy `Your unique URL` from there
 
 - Run `npx flatfile@latest deploy`. For authentication, I prefer to select `API Key`
   - If you also select `API Key`, copy your `Secret Key` from your Flatfile dashboard
 
-- Click enter, and confirm that terminal says `Event listener deployed and running ...`
+- Click enter, and confirm that terminal says `Event listener "default" deployed and running ...`
 
 _________________________________________________
 ### Test the workflow
-- Login to your dashboard at `https://platform.flatfile.com/dashboard/`
+- Login to your dashboard at `https://platform.flatfile.com/account/login`
 
-- On the left panel next to `PLATFORM APPS`, click `+`
+- On the left panel, select the App name and click `+ Add an App`
 
 - For `Name`, type `App One`. Edit auto-generated `Namespace` to `appOne` to match what's in the code
 
-- Click `Create New App` button. Then, select `App One` in the left panel
+- Configure other App options as you want, and click `Create New App`. Then, select `App One` in the left panel
 
-- On the top-right, click `+ Create New Space`
+- On the top-right, click `+ Create New Session`
 
-- Name your session `Submit mapped fields only`, and click `Enter` to create a new Space
+- Name your session `View mapped fields only`, and click `Enter` to create a new Space
 
 - That Space should automatically open in a new tab. If it does not, click on Space name to open it 
 
-- Click `Add file`, and upload `example_file.csv` that is inside the project you cloned
+- Click `Upload file`, and upload `example_file_contacts.csv` from the project you cloned to `Contacts` sheet
 
 - Ensure that fields with `(DO NOT MAP)` in their name are NOT mapped. Make sure remaining fields are mapped
 
-- Click `Continue`. As records load in the table, note that fields with `(DO NOT MAP)` in their names are empty
+- Click `Continue`. Note how the Flatfile table dynamically updates to only show mapped fields
 
 - Click `Submit` on the top right. When you see the `Success!` message, proceed to https://webhook.site/ 
 
 - Notice how `(DO NOT MAP)` fields were NOT sent to https://webhook.site/ , since you left them unmapped
+
+- Go back to the tab with your Space and click on the `Submit` button again and go to https://webhook.site/ 
+
+- Notice that the payload is empty on the second attempt to submit data to you

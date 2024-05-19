@@ -6,7 +6,7 @@ If you find any issues with this README, or the repo in general, please email me
 
 ## For visual learners
 
-If you want to just follow the video on how to get everything done, [here is a Loom video](https://www.loom.com/share/9c907f903b074bca8262bdff4dcf7b97?sid=52292f9a-dc83-4abc-ab16-826a0c3f7943) for you
+If you want to just follow the video on how to get everything done, [here is a Loom video](https://www.loom.com/share/9d974aff5799438d900c66fbbcde9fb3?sid=90a327d8-6f78-4830-981d-2312b119a053) for you
 
 **IMPORTANT -** If you follow the video above to get everything set up, the information below ***is still valuable to you***
 
